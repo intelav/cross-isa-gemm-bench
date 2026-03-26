@@ -1,0 +1,7 @@
+build/
+*.o
+*.out
+*.log
+*.csv
+results/raw/*
+results/plots/*
