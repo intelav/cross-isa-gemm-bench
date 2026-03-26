@@ -76,10 +76,30 @@ This project is intended for systems engineers working on:
 
 ## Roadmap
 
+### Core Compute
 - [ ] Baseline GEMM (naive)
 - [ ] Cache-blocked GEMM
 - [ ] NEON vectorization
 - [ ] RVV implementation (QEMU)
-- [ ] perf-based profiling
-- [ ] Cross-platform result comparison
-- [ ] LLVM codegen analysis
+- [ ] Cross-platform benchmarking (ARM, RISC-V, GPU)
+
+### Profiling & Analysis
+- [ ] perf-based profiling (IPC, cache, memory)
+- [ ] Roofline-style analysis (compute vs memory bound)
+- [ ] LLVM codegen analysis (auto-vectorization vs intrinsics)
+
+### Data Movement & System-Level Analysis
+- [ ] Measure memory bandwidth vs compute throughput
+- [ ] Analyze data movement cost (memcpy vs compute time)
+- [ ] Simulate pipeline: data transfer + compute overlap
+
+### RDMA / SmartNIC Exploration (Advanced)
+- [ ] Model RDMA-style data transfer vs CPU memcpy
+- [ ] Simulate zero-copy data pipelines
+- [ ] Analyze impact of offloading data movement from CPU
+- [ ] Explore eBPF / SmartNIC-style compute + data path integration
+
+### Synthesis
+- [ ] Cross-ISA performance gap decomposition
+- [ ] Compute vs data-movement bottleneck breakdown
+- [ ] Optimization opportunities across ISA, compiler, and system
